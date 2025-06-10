@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: orange;
+        }
+
+        .First {
+            margin-top: 4em;
+            color: white;
+            font-family: "Gill Sans Extrabold", sans-serif;
+
+        }
+
+        .Second {
+            background-color: white;
+            /* margin-top: auto; */
+            margin-left: 4%;
+            margin-right: 4%;
+            height:70vh;
+            width: 1500px;
+            color: orange;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+
+        .Third {
+            margin-top: 40px;
+            /* background-color: black; */
+            height: 120px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        #h {
+            margin-left: 20px;
+            padding: 25px;
+        }
+
+        #line {
+
+            border-left: 3px solid rgb(43, 22, 22);
+            height: 40px;
+            margin-left: -120px;
+            margin-top: 40px;
+        }
+
+        .l {
+            height: 380px;
+            position: absolute;
+            top: 50px;
+            border-left: 4px solid wheat;
+            margin-left: 40px;
+        }
+
+        img {
+            position: relative;
+            opacity: 0.5;
+            color: rgb(100, 87, 87);
+            width: 100%;
+            height: auto;
+        }
+
+        .Four {
+            background-color: black;
+            width: 1500px;
+            height: 480px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 40px;
+            padding: 10px;
+            margin-left: -470px;
+            flex-wrap: wrap;
+            display: flex;
+            gap: 20px;
+        }
+
+        li {
+            display: inline;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        a:hover {
+            color: indianred;
+        }
+
+        #clr {
+            color: orange;
+            position: absolute;
+            top: 120px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 70px;
+            font-family: cursive;
+            margin-left: 370px;
+        }
+
+        #clr1 {
+            top: 200px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            font-size: 70px;
+            font-family: cursive;
+            margin-left: 360px;
+        }
+
+        .circle {
+            position: absolute;
+            top: 100px;
+            border-radius: 50%;
+            height: 300px;
+            width: 300px;
+            margin-left: 90px;
+        }
+
+        #im {
+            top: 0;
+            border-radius: 50%;
+            height: 300px;
+            width: 300px;
+            opacity: 1;
+        }
+
+        .circle1 {
+            position: absolute;
+            top: 100px;
+            border-radius: 50% 50%;
+            height: 300px;
+            width: 300px;
+
+            margin-left: 1350px;
+        }
+
+        #im1 {
+            position: absolute;
+            top: 0px;
+            border-radius: 50%;
+            height: 300px;
+            width: 300px;
+            margin-left: 0px;
+            opacity: 1;
+        }
+
+        button {
+            position: relative;
+            background-color: orange;
+            border: none;
+            font-size: 28px;
+            color: #FFFFFF;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            -webkit-transition-duration: 0.4s;
+            /* Safari */
+            transition-duration: 0.4s;
+            text-decoration: none;
+            overflow: hidden;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        button {
+            height: 70px;
+            width: 200px;
+            top: 300px;
+            background-color: rgb(242, 142, 28);
+            font-size: larger;
+            border-radius: 10px;
+            border: 2px solid rgb(229, 138, 20);
+            margin-left: 400px;
+        }
+
+        button:after {
+            content: "";
+            background: #ebd297;
+            display: block;
+            position: absolute;
+            padding-top: 300%;
+            padding-left: 350%;
+            margin-left: -20px !important;
+            margin-top: -120%;
+            opacity: 0;
+            transition: all 0.8s
+        }
+
+        button:active:after {
+            padding: 0;
+            margin: 0;
+            opacity: 1;
+            transition: 0s
+        }
+
+        /* .row {
+            background-color: orange;
+            position: absolute;
+            height: 40px;
+            width: 280px;
+            top: 300px;
+            margin-left: 1100px;
+            border-radius: 0 -70% 0 0;
+        } */
+
+        @media only screen and (max-width:768px) {
+            .Second {
+                margin-top: 2%;
+                margin-right: 2%;
+            }
+        }
+
+        @media only screen and(max-width:477px) {
+            .Second {
+                margin-left: 1%;
+                margin-right: 1;
+            }
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a{
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover{
+            background-color: #f1f1f1;
+            
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            color: darkcyan;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="First">
+
+        <h1>
+            <center>
+                V I R T U A L - R E S T A U R A N T
+            </center>
+        </h1>
+
+        <div class="Second">
+            <div class="Third">
+                <h2 id="h">FOOD CLUB</h2>
+                <h1 id="line"></h1>
+                <ul>
+                    <li>
+                        <a href="./res.html" target="_blank">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="./Menu.html" target="_blank"> Menu</a>
+                        <div class="dropdown-content">
+                            <p>Pizza</p>
+                            <p>Pasta</p>
+                            <p>Palak Paneer</p>
+                            <p>Fish Curry</p>
+                            <p>Coffee</p>
+                            <p>More..</p>
+                        </div>
+                    </li>
+                    <li class="log">
+                        <a href="./Sign.html" target="_blank">Sign Up</a>
+                    </li>
+                    <li class="log">
+                        <a href="./Login.htm" target="_blank">Login</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Four">
+
+                <img src="./img/bg-img.jpg" width="1500px" height="480px">
+                <div>
+                    <div class="l"></div>
+                    <div class="circle">
+                        <img src="./img/circle-img.jpg" id="im">
+                    </div>
+                    <div class="circle1">
+                        <img src="./img/corn.jpg" id="im1">
+                    </div>
+                    <div class="row">
+                    </div>
+                    <div id="clr">TASTE </div>
+                    <div id="clr1">ORGANIC</div>
+
+                    <div>
+                        <a href="./food.htm" target="_blank">
+                        <button>ORDER FOOD</button>
+                    </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

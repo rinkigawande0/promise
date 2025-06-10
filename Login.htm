@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* body{
+            background-color: orange;
+        } */
+        /* h3{
+            margin: 200px;
+            font-size: 40px;
+            color: white;
+        } */
+        /* .content{
+            background-color: white;
+            color: black;
+            font-size: 30px;
+            height: 500px;
+            width: 500px;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin: 100px;
+            padding: 10px;
+            margin-left: 600px;
+        } */
+
+        /* .inpt{
+            border-radius: 7px;
+            height: 40px;
+            width: 400px;
+            margin-left: 60px;
+        }
+
+        #mi{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-left: 70px;
+        } */
+
+        * {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(./img/backgroundImage.jpg);
+            background-size: cover;
+        }
+
+        .glass-container {
+            width: 300px;
+            height: 350px;
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            border: 1px solid #fff;
+        }
+
+        .glass-container::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            z-index: -1;
+        }
+
+        .login-box {
+            max-width: 250px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h2 {
+            color: #fff;
+            margin-top: 30px;
+            margin-bottom: -20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        input {
+            color: #fff;
+            font-size: 13px;
+            border: 1px solid #fff;
+            background: transparent;
+            border-radius: 10px;
+            margin-top: 25px;
+            padding: 10px;
+        }
+
+        input::placeholder {
+            color: #fff;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .options {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+            font-size: 12px;
+            color: white;
+        }
+
+        .options input {
+            margin-right: 5px;
+            margin-top: 0px;
+        }
+
+        .options a {
+            text-decoration: none;
+            color: white;
+            margin-left: auto;
+        }
+
+        button {
+            background: #fff;
+            color: black;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 15px;
+            width: 180px;
+        }
+
+        button:hover {
+            background: transparent;
+            color: white;
+            outline: 2px solid #fff;
+        }
+
+        p {
+            font-size: 12px;
+            color: #fff;
+            margin-top: 15px;
+        }
+
+        #register {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="glass-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="#" method="POST"></form>
+
+            <input type="text" id="username" name="username" required placeholder="Username">
+
+            <input type="password" id="password" name="password" required placeholder="Password">
+
+            <div class="options">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+
+            <button type="submit" onclick="click()">Login</button>
+
+            <p>Don't have an account? <a href="./Sign.html" id="register" target="_blank">Sign Up</a></p>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    function click() {
+
+        let userName = document.getElementById("username").value;
+        console.log(userName);
+        let passWord = document.getElementById("password").value;
+        console.log(passWord);
+    }
+
+</script>

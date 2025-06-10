@@ -1,0 +1,114 @@
+<!-- 4. **Problem Statement:** You have recently taken a McDonald’s franchise. You, being a software developer, want to design a virtual food ordering system to handle the orders coming in. Users should be able to place orders through it. Whenever one order is complete, it should be visible on the screen with the order number.
+
+### **Description:-**
+
+1. Create a button called 'Order Food'. Create a checkbox of multiple food items you can choose from.
+2. When a user clicks on order food, create a promise that will resolve after random seconds.
+3. Once the promise is resolved, show the image of the food in the centre and the order ID at the top right corner.
+4. Try to make your virtual restaurant as real as possible -->
+<!-- &nbsp;  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        
+    </style>
+</head>
+
+<body>
+<div id="bigC">
+    <h1>
+        <center>Virtual Restaurant</center>
+    </h1>
+    <button id="order-btn">
+        Order Food
+    </button>
+    <br><br>
+    <div id="order-status">
+        <p id="order-id"></p>
+        <img id="food-img" src="./img/Burger.jpg" width="300px" height="200px">
+        <img id="food-img" src="./img/fries.jpg" width="300px" height="200px">
+        <img id="food-img" src="./img/coke.jpg" width="300px" height="200px">
+        <img id="food-img" src="./img/pizza.jpg" width="300px" height="200px">
+        <img id="food-img" src="./img/Sandwich.jpg" width="300px" height="200px">
+        <img id="food-img" src="./img/pasta.jpg" width="300px" height="200px">
+        <img id="food-img" src="./img/corn.jpg" width="300px" height="200px">
+        <img id="food-img" src="./img/honey-chilli.jpg" width="300px" height="200px">
+        <img id="food-img" src="./img/Cheese-Balls.jpg" width="300px" height="200px">
+        <img id="food-img" src="./img/Tawa-Paneer-Masala-Recipe.jpg" width="300px" height="200px">
+        <img id="food-img" src="./img/Crispy-Babycorn-Chilli.jpg" width="300px" height="200px">
+        <img id="food-img" src="./img/Chees Fingers.jpg" width="300px" height="200px">
+        <img id="food-img" src="./img/Iced-Mocha cofee.webp" width="300px" height="200px">
+        <img id="food-img" src="./img/Aloo-Kachori.png" width="300px" height="200px">
+    </div>
+</div>
+
+    <div id="Food-Options">
+
+        <input type="checkbox" name="burger" id="burger">
+        <label for="burger">burger</label>
+        <input type="checkbox" name="fries" id="fries">
+        <label for="fries">fries</label>
+        <input type="checkbox" name="coke" id="coke">
+        <label for="coke">coke</label>
+        <input type="checkbox" name="Pizza" id="Pizza">
+        <label for="Pizza">Pizza</label>
+        <input type="checkbox" name="Sandwich" id="Sandwich">
+        <label for="Sandwich">Sandwich</label>
+        <input type="checkbox" name="Pasta" id="Pasta">
+        <label for="Pasta">Pasta</label>
+        <input type="checkbox" name="corn" id="corn">
+        <label for="corn">corn</label>
+        <input type="checkbox" name="Honey Chilly Potato" id="Chilly">
+        <label for="Chilly">Honey Chilly Potato</label>
+        <input type="checkbox" name="CheeseBall" id="CheeseBall">
+        <label for="CheeseBall">CheeseBall</label>
+        <input type="checkbox" name="Paneer" id="Paneer">
+        <label for="Paneer">Paneer</label>
+        <input type="checkbox" name="Baby Chilli Corn" id="Baby Chilli Corn">
+        <label for="Baby Chilli Corn">Baby Chilli Corn</label>
+        <input type="checkbox" name="Cheese Finger" id="Cheese Finger">
+        <label for="Cheese Finger">Cheese Finger</label>
+        <input type="checkbox" name="Cold Cofee" id="Cold Cofee">
+        <label for="Cold Cofee">Cold Cofee</label>
+        <input type="checkbox" name="Aloo-Kachori" id="Aloo-Kachori">
+        <label for="Aloo-Kachori">Aloo-Kachori</label>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    let orderId = 1;
+    document.getElementById("order-btn").addEventListener("click", () => {
+        let foodOptions = document.querySelectorAll('#Food-Options input[type="checkbox"]:checked');
+        let foodItems = Array.from(foodOptions).map(Option => Option.name);
+
+        if (foodItems.length === 0) {
+            alert("Please select at least one food item");
+            return;
+        }
+
+        let promise = new Promise((resolve, rejected) => {
+            setTimeout(() => {
+                resolve({
+                    foodItems, orderId: orderId++
+                });
+            }, Math.random() * 5000);//random delay between 0 to 5 second
+        });
+
+        promise.then((data) => {
+            document.getElementById("order-id").innerText = `Order ID: ${data.orderId}`;
+            document.getElementById("food-img").src = `img/${data.foodItems[0]}.jpg`;//photos store in img folder
+        });
+    });
+</script>
+
+
+

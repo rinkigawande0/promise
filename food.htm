@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        margin: 0;
+        /* box-sizing: border-box; */
+        /* background: orange; */
+
+    }
+    body{
+        background: orange;
+    }
+
+    .Main-Container{
+        /* background-color: black; */
+        border-radius: 5px;
+        height: 200vh;
+        
+    }
+
+    .Second{
+        /* box-sizing: border-box; */
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        /* color: aqua; */
+        gap: 10px;
+        /* background-color: white; */
+        /* background: black; */
+        border-radius: 20px;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+       }
+    .box{
+        margin-top: 20px;
+        border-radius: 10px;
+        background-color: white;
+        margin-left: 30px;
+        height: 350px;
+        margin-right: 30px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        width: 300px;
+        /* text-align: center; */
+    }
+    img{
+        border-radius: 10px 10px 0 0;
+        margin: 0;
+    }
+    input,p,label{
+        /* background-color: white; */
+        color: black;
+        margin-left: 10px;
+        border-radius: 20px;
+    }
+
+    button{
+        background: rgb(25, 229, 25);
+        border-radius: 10px;
+        height: 50px;
+        width: 100px;
+        margin-left: 50px;
+        margin-top: 10px;
+    
+    }
+
+    /* h1{
+        margin-top: 30px;
+        padding: 20px;
+    } */
+
+    #order-id{
+        height: 50px;
+        width: 100px;
+        background: red;
+        color: black;
+        /* margin-left: 100x; */
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        margin-right: 100px;
+        margin-left: 1500px;
+    }
+    /* h3{
+        background-color: black;
+    } */
+    /* .but{
+        display: flex;
+        width: 400px;
+        background-color: black;
+     } */
+</style>
+
+</head>
+<body>
+    
+    <h1> <center>Top Food You Order From Here</center> </h1>
+        
+        <!-- <div class="but"> -->
+            <button id="order-btn">Order Food</button>
+        <button id="order-id"></button>
+
+        <div id="ordered-foods" style="text-align: center;"></div>
+
+        <!-- </div> -->
+    <div class="Main-Container">
+              
+        <div class="Second">
+            
+            <div class="box">
+                <img id="foodImg-1" src="./imges/chai.jpg" width="300px" height="300px"><br>
+                <input type="checkbox" id="Chai" name="Chai" class="Food-Options">
+                <label for="Chai">Chai</label>
+                <p>Price - &#x20B9;10</p>
+            </div>
+            <div class="box">
+                 <img id="foodImg-2" src="./imges/cappucinno.jpg" width="300px" height="300px"><br>
+                 <input type="checkbox" id="cappucinno" name="cappucinno" class="">
+                <label for="cappucinno">Cappucinno</label>
+                <p>Price - &#x20B9;120</p>
+                </div>
+            <div class="box">
+                <img id="foodImg-3" src="./imges/chicken-biryani.webp" width="300px" height="300px"><br>
+                <input type="checkbox" id="chicken-biryani" name="chicken-biryani" class="">
+                <label for="chicken-biryani">Chicken-biryani</label>
+                <p>Price - &#x20B9;110</p>
+            </div>
+            <div class="box">
+                <img id="foodImg-4" src="./imges/chicken-lollipop.jpg" width="300px" height="300px"><br>
+                
+                <input type="checkbox" id="chicken-lollipop" name="chicken-lollipop" class="">
+                <label for="chicken-lollipop">Chicken-lollipop</label>
+                <p>Price - &#x20B9;110</p>
+                
+            </div>
+            <div class="box">
+                <img id="foodImg-5" src="./imges/chicken-tikka-masala.jpg" width="300px" height="300px" ><br>
+
+                <input type="checkbox" id="chicken" name="chicken" class="">
+                <label for="chicken">Chicken-tikka-masala</label>
+                <p>Price - &#x20B9;120</p>
+            </div>
+            <div class="box">
+                <img id="foodImg-6" src="./imges/Chocolate-Shake.jpg" width="300px" height="300px"><br>
+                
+                <input type="checkbox" id="Chocolate-Shake" name="Chocolate-Shake">
+                <label for="Chocolate-Shake">Chocolate-Shake</label>
+                <p>Price - &#x20B9;90</p>
+            </div>
+            <div class="box">
+                <img id="foodImg-7" src="./imges/DAL_stock.webp" width="300px" height="300px"><br>
+                
+                <input type="checkbox" id="Dal-Makhani" name="Dal-Makhani">
+                <label for="Dal-Makhani">Dal-Makhani</label>
+                <p>Price - &#x20B9;120</p>
+            </div>
+            <div class="box">
+                <img id="foodImg-8" src="./imges/Espresso_0.avif" width="300px" height="300px"><br>
+                
+                <input type="checkbox" id="Espresso" name="Espresso">
+                <label for="Espresso">Espresso</label>
+                <p>Price - &#x20B9;100</p>
+            </div>
+            <div class="box">
+                <img id="foodImg-9" src="./imges/fish-curry-28687129.webp" width="300px" height="300px"><br>
+                
+                <input type="checkbox" id="fish-curry" name="fish-curry" class="Food-Options">
+                <label for="fish-curry" class="Food-Options">Fish-curry</label>
+                <p>Price - &#x20B9;140</p>
+            </div>
+            <div class="box">
+                <img id="foodImg-10" src="./imges/fish-fingers.jpg" width="300px" height="300px"><br>
+                
+                <input type="checkbox" id="fish-fingers" name="fish-fingers" class="Food-Options">
+                <label for="fish-fingers" class="Food-Options">Fish-fingers</label>
+                <p>Price - &#x20B9;125</p>
+            </div>
+            <div class="box">
+                <img id="foodImg-11" src="./imges/GarlicParmesanCauliflower.jpg" width="300px" height="300px"><br>
+                
+                <input type="checkbox" id="Garlic-Parmesan-Cauliflower" name="Garlic-Parmesan-Cauliflower">
+                <label for="Garlic-Parmesan-Cauliflower">Garlic-Parmesan-Cauliflower</label>
+                <p>Price - &#x20B9;140</p>
+            </div>
+            <div class="box">
+                <img id="foodImg-12" src="./imges/green tea.jpg" width="300px" height="300px"><br>
+                
+                <input type="checkbox" id="Green-Tea" name="Green-Tea">
+                <label for="Green-Tea">Green-Tea</label>
+                <p>Price - &#x20B9;20</p>
+            </div>
+            <div class="box">
+                <img id="foodImg-13" src="./imges/Lamb-Rogan-Josh-Curry.jpg" width="300px" height="300px"><br>
+                
+                <input type="checkbox" id="Lamb-Rogan-Curry" name="Lamb-Rogan-Curry">
+                <label for="Lamb-Rogan-Curry">Lamb-Rogan-Curry</label>
+                <p>Price - &#x20B9;150</p>
+            </div>
+            <div class="box">
+                <img id="foodImg-14" src="./imges/lamb-shish-kebab.jpg" width="300px" height="300px"><br>
+                
+                <input type="checkbox" id="lamb-shish-kebab" name="lamb-shish-kebab">
+                <label for="lamb-shish-kebab">lamb-shish-kebab</label>
+                <p>Price - &#x20B9;130</p>
+            </div>
+            <div class="box">
+                <img id="foodImg-15" src="./imges/mango-milkshake.jpg" width="300px" height="300px"><br>
+              
+                <input type="checkbox" id="mango-milkshake" name="mango-milkshake">
+                <label for="mango-milkshake">Mango-milkshake</label>
+                <p>Price - &#x20B9;60</p>
+            </div>
+            <div class="box">
+                <img id="foodImg-16" src="./imges/Palak-Paneer.jpg" width="300px" height="300px"><br>
+                
+                <input type="checkbox" id="Palak-Paneer" name="Palak-Paneer">
+                <label for="Palak-Paneer">Palak-Paneer</label>
+                <p>Price - &#x20B9;60</p>
+            </div>
+            <div class="box">
+                <img id="foodImg-17" src="./imges/paneer-tikka.jpg" width="300px" height="300px"><br>
+
+                <input type="checkbox" id="paneer-tikka" name="paneer-tikka">
+                <label for="paneer-tikka">Paneer-tikka</label>
+                <p>Price - &#x20B9;170</p>
+            </div>
+            <div class="box">
+                <img id="foodImg-18" src="./imges/straberry-smoothie.jpg" width="300px" height="300px"><br>
+               
+                <input type="checkbox" id="straberry-smoothie" name="straberry-smoothie">
+                <label for="straberry-smoothie">Straberry-smoothie</label>
+                <p>Price - &#x20B9;180</p>
+            </div>
+            <div class="box">
+                <img id="foodImg-19" src="./imges/tandoori-chicken.jpg" width="300px" height="300px"><br>
+               
+                <input type="checkbox" id="Tandoori-Chicken" name="Tandoori-Chicken">
+                <label for="Tandoori-Chicken">Tandoori-Chicken</label>
+                <p>Price - &#x20B9;130</p>
+            </div>
+            <div class="box">
+                <img id="foodImg-20" src="./imges/Tandoori-Roti.jpg" width="300px" height="300px"><br>
+               
+                <input type="checkbox" id="Tandoori-Roti" name="Tandoori-Roti">
+                <label for="Tandoori-Roti">Tandoori-Roti</label>
+                <p>Price - &#x20B9;30</p>
+            </div>
+            <div class="box">
+                <img id="foodImg-21" src="./imges/Vef-spring-roll.jpg" width="300px" height="300px"><br>
+                
+                <input type="checkbox" id="Veg-spring-roll" name="Veg-spring-roll">
+                <label for="Veg-spring-roll">Veg-spring-roll</label>
+                <p>Price - &#x20B9;80</p>
+            </div>
+            <div class="box">
+                <img id="foodImg-22" src="./imges/Veg-Biryani-Featured.jpg" width="300px" height="300px"><br>
+                
+                <input type="checkbox" id="Veg-Biryani-Featured" name="Veg-Biryani-Featured">
+                <label for="Veg-Biryani-Featured">Veg-Biryani-Featured</label>
+                <p>Price - &#x20B9;140</p>
+            </div>
+            <div class="box">
+                <img id="foodImg-23" src="./imges/veg-samosa.jpg" width="300px" height="300px"><br>
+                
+                <input type="checkbox" id="veg-samosa" name="veg-samosa">
+                <label for="veg-samosa">Veg-samosa</label>
+                <p>Price - &#x20B9;40</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+<script>
+     let orderId = 2;
+     document.getElementById("order-btn").addEventListener("click",()=>{
+        let foodOptions = document.querySelectorAll('.box input[type="checkbox"]:checked');
+        let foodItems = Array.from(foodOptions).map(Option => Option.name);
+
+        if(foodItems.length===0){
+            alert("please select at least one food item");
+            return;
+        }
+
+        let promise = new Promise((res,rej)=>{
+            setTimeout(()=>{
+                res({
+                    foodItems,orderId:orderId++
+                });
+            },Math.random()*5000);
+        });
+        promise.then((data)=>{
+            document.getElementById("order-id").innerText = `Order ID: ${data.orderId}`;
+            document.getElementById("foodImg-1").src=`./imges/${data.foodItems[0]}.jpg`;
+            document.getElementById("foodImg-1").style.textAlign="center";
+        })
+     })
+
+</script>

@@ -1,0 +1,28 @@
+<!-- 2. Write a function named waitPromise that accepts time in ms and returns a promise.
+    - The promise should be resolved after a given time. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+function waitPromise(){
+    let times = 1000;
+    let promise = new Promise((res,rej)=>{
+        setTimeout(()=>{
+            res("this task complete");
+        },times)
+    }).then((ans)=>console.log(ans))
+}
+waitPromise();
+
+</script>
+    

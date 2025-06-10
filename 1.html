@@ -1,0 +1,31 @@
+<!-- 1. Take a count value as variable
+    - Create a new promise in such a way that if the count is > 0, resolve it with "Positive count", else reject it with "negative count" -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        
+    </body>
+    </html>
+
+    <script>
+
+        let promise = new Promise((one,two)=>{
+            let count = 0;
+            if(count>0){
+                one("Positive count");
+            }
+            else{
+                two("Negative count");
+            }
+
+        })
+        console.log(promise.then((ans)=>console.log(ans)).catch((res)=>console.log(res)));
+        
+
+    </script>

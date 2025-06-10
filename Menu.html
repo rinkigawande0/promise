@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: orange;
+        }
+
+        .First {
+            margin-top: 4em;
+            color: white;
+            font-family: "Gill Sans Extrabold", sans-serif;
+        }
+
+        .Second {
+            background-color: white;
+            /* margin-top: auto; */
+            margin-left: 4%;
+            margin-right: 4%;
+            height: 600px;
+            width: 1500px;
+            color: orange;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+
+        .Third {
+            margin-top: 40px;
+            /* background-color: black; */
+            height: 120px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        #h {
+            margin-left: 20px;
+            padding: 25px;
+        }
+
+        #line {
+
+            border-left: 3px solid rgb(43, 22, 22);
+            height: 40px;
+            margin-left: -120px;
+            margin-top: 40px;
+        }
+
+        .l {
+            height: 380px;
+            position: absolute;
+            top: 50px;
+            border-left: 4px solid wheat;
+            margin-left: 40px;
+        }
+
+        img {
+            position: relative;
+            opacity: 0.5;
+            color: rgb(100, 87, 87);
+            width: 100%;
+            height: auto;
+        }
+
+        .Four {
+            background-color: black;
+            width: 1500px;
+            height: 480px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ull {
+            list-style-type: none;
+            margin: 40px;
+            padding: 10px;
+            margin-left: -470px;
+            flex-wrap: wrap;
+            display: flex;
+            gap: 20px;
+        }
+
+        
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        a:hover {
+            color: indianred;
+        }
+
+      
+      
+        
+
+        
+
+       
+
+       
+        @media only screen and (max-width:768px) {
+            .Second {
+                margin-top: 2%;
+                margin-right: 2%;
+            }
+        }
+
+        @media only screen and(max-width:477px) {
+            .Second {
+                margin-left: 1%;
+                margin-right: 1;
+            }
+        }
+
+        .two{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 70px;
+            margin-left: 70px;
+            
+        }
+        .heading{
+            color: #f4f2f2;
+            margin: 0;
+        }
+
+
+        
+      
+
+       
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="First">
+
+        <h1>
+            <center>
+                V I R T U A L - R E S T A U R A N T
+            </center>
+        </h1>
+
+        <div class="Second">
+            <div class="Third">
+                <h2 id="h">FOOD CLUB</h2>
+                <h1 id="line"></h1>
+                <ul class="ull">
+                    <li>
+                        <a href="./res.html" target="_parent">Home</a>
+                    </li>
+                    <!-- <li class="dropdown">
+                        <a href=""> Menu</a>
+                    </li>
+                    <li class="log">
+                        <a href="">Sign in</a>
+                    </li>
+                    <li class="log">
+                        <a href="./sign.htm" target="_blank">Login</a>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="Four">
+
+                <img src="./img/MBG-img.webp" width="1500px" height="480px">
+                <div>
+                    <div class="l">
+                         <div class="two">
+                            <div class="Menu-food">MAIN COURSE
+                                <h4 class="heading">Vegetarian:</h4>
+                                <ul class="list">
+                                    <li>Palak Paneer...............&#x20B9; 120</li>
+                                    <li>Vegetable Biryani........&#x20B9; 250</li>
+                                    <li>Dal Makhani................&#x20B9; 170</li>
+                                    <li>Butter Roti...................&#x20B9; 20</li>
+                                </ul>
+                                <h4 class="heading">Non-Vegetarian:</h4>
+                                <ul class="list">
+                                    <li>Chicken Tikka Masala....&#x20B9; 150</li>
+                                    <li>Fish Curry.......................&#x20B9; 200</li>
+                                    <li>Lamb Rogan Josh...........&#x20B9; 210</li>
+                                    <li>Chicken Biryani...............&#x20B9; 110</li>
+                                </ul>
+                            </div>
+                            <div class="Menu-food">STARTERS
+                                <h4 class="heading">Vegetarian:</h4>
+                                <ul class="list">
+                                    <li>Veg Samosas...............&#x20B9; 40</li>
+                                    <li>Paneer Tikka.................&#x20B9; 60</li>
+                                    <li>Veg Spring Rolls............&#x20B9; 60</li>
+                                    <li>Baked Cauliflower..........&#x20B9; 70</li>
+                                </ul>
+                                <h4 class="heading">Non-Vegetarian:</h4>
+                                <ul class="list">
+                                    <li>Chicken Lollipop................&#x20B9; 120</li>
+                                    <li>Fish Fingers...................&#x20B9; 140</li>
+                                    <li>Lamb Kebabs.................&#x20B9; 120</li>
+                                    <li>Tandoori-Chicken................&#x20B9; 140</li>
+                                </ul>
+                            </div>
+                            <div class="Menu-food">DRINKS
+                                <h4 class="heading">Coffee aur Tea:</h4>
+                                <ul class="list">
+                                    <li>Espresso...............&#x20B9; 110</li>
+                                    <li>Cappuccino...........&#x20B9; 120</li>
+                                    <li>Chai.......................&#x20B9;10</li>
+                                    <li>Green Tea..............&#x20B9; 140</li>
+                                </ul>
+                                <h4 class="heading">Milkshakes aur Smoothies:</h4>
+                                <ul class="list">
+                                    <li>Chocolate Milkshake....&#x20B9; 90</li>
+                                    <li>Strawberry Smoothie....&#x20B9; 100</li>
+                                    <li>Mango Milkshake..........&#x20B9; 110</li>
+                                    <li>Banana Smoothie..........&#x20B9; 120</li>
+                                </ul>
+                                <h4 class="heading">Cocktails aur Mocktails:</h4>
+                                <ul class="list">
+                                    <li>Mojito..........................&#x20B9; 70</li>
+                                    <li>Virgin Mojito................&#x20B9; 90</li>
+                                    <li>Cosmopolitan..............&#x20B9; 120</li>
+                                    <li>Shirley Temple.............&#x20B9; 110</li>
+                                </ul>
+                            </div>
+                            <div class="Menu-food">DESSERT
+                                <h4 class="heading">Cakes aur Pastries</h4>
+                                <ul class="list">
+                                    <li>Chocolate Lava Cake...............&#x20B9; 40</li>
+                                    <li>Cheesecake..............................&#x20B9; 60</li>
+                                    <li>Tiramisu....................................&#x20B9; 80</li>
+                                    <li>Fruit Tart...................................&#x20B9; 90</li>
+                                </ul>
+                                <h4 class="heading">Indian Desserts</h4>
+                                <ul class="list">
+                                    <li>Gulab Jamun............................&#x20B9; 25</li>
+                                    <li>Jalebi........................................&#x20B9; 30</li>
+                                    <li>Ras Malai.................................&#x20B9; 40</li>
+                                    <li>Barfi..........................................&#x20B9; 20</li>
+                                </ul>
+                            </div>
+
+                            
+                         </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

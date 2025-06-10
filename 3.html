@@ -1,0 +1,29 @@
+<!-- 3. The user should be able to enter OTP and, when clicking on submit, make a new promise
+    - Promise should resolve if entered OTP is "1234" else reject -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" name="" id="id" placeholder="OTP">
+        <button onclick="clk()">Send</button>
+    </body>
+    </html>
+
+    <script>
+
+        function clk(){
+            let otp=document.querySelector("#id").value;
+            let promise = new Promise((res,rej)=>{
+                if(otp=="1234"){
+                    res("correct otp");
+                }else{
+                    rej("incorrect otp❌");
+                }
+            }).then((Ans)=>alert(Ans)).catch((ans)=>alert(ans))
+        }
+    </script>

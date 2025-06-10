@@ -1,0 +1,318 @@
+<!-- 1. **Create a slideshow with at least 20 images (take some dummy images)**
+    - There should be a button to stop the slideshow and start the slideshow show
+    - Provide a next and previous button below the slideshow.
+    - On clicking the next or previous button, the automatic slideshow will stop
+    - And it will work as a normal slider -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            *{
+                box-sizing: border-box;
+                margin-top: 10px;
+                /* background-color: black; */
+            }
+            /* slideshow-container */
+            .slideshow-container{
+                max-width: 1000px;
+                position: relative;
+                margin: auto;
+            }
+            /* hide img */
+            .mySlides{
+                display: none;
+            }
+    
+            /* next ans prev */
+            .prev, .next {
+                cursor: pointer;
+                position: absolute;
+                /* top: 50%; */
+                width: auto;
+                /* margin-top: -22px; */
+                padding: 16px;
+                /* color: white; */
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+    }
+    
+            /* set next button to the right  */
+            .next{
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+            /* On hover */
+            .prev:hover, .next:hover{
+                background-color: rgba(0, 0, 0,0.8);
+            }
+    
+            /* Caption text */
+            .text{
+    
+                color: #f2f2f2;
+                font-size: 15px;
+                padding: 8px 12px;
+                position: absolute;
+                bottom: 8px;
+                width: 100%;
+                text-align: center;
+            }
+            .numbertext {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+    }
+    
+            /* The dot */
+            .dot{
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+    
+            .active,.dot:hover{
+                background-color: #717171;
+            }
+    
+            /* Fading animation */
+        
+            .fade{
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+    
+            @keyframes fade{
+                from{opacity: .4}
+                to{opacity: 1}
+            }
+    
+        </style>
+    
+    </head>
+    <body>
+        <!--  slideshow-container-->
+        <div class="slideshow-container">
+              <!-- img with number and caption -->
+            <div class="mySlides fade">
+                <div class="numbertext"> 
+                    1/14
+                </div>
+                <img src="./img/Aloo-Kachori.png" style="width: 1000px; height: 700px;">
+                <div class="text">Caption Text</div>
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext"> 
+                    2/14
+                </div>
+                <img src="./img/Burger.jpg"  style="width: 1000px; height: 700px;">
+                <div class="text">Caption Two</div>
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext"> 
+                    3/14
+                </div>
+                <img src="./img/Chees Fingers.jpg"  style="width: 1000px; height: 700px;">
+                <div class="text">Caption Three</div>
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext"> 
+                    4/14
+                </div>
+                <img src="./img/Cheese-Balls.jpg"  style="width: 1000px; height: 700px;">
+                <div class="text">Caption Four</div>
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext"> 
+                    5/14
+                </div>
+                <img src="./img/coke.jpg"  style="width: 1000px; height: 700px;">
+                <div class="text">Caption Five</div>
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext"> 
+                    6/14
+                </div>
+                <img src="./img/corn.jpg" alt="dog" style="width: 1000px; height: 700px;">
+                <div class="text">Caption Six</div>
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext"> 
+                    7/14
+                </div>
+                <img src="./img/Crispy-Babycorn-Chilli.jpg" alt="dog" style="width: 1000px; height: 700px;">
+                <div class="text">Caption Seven</div>
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext"> 
+                    8/14
+                </div>
+                <img src="./img/fries.jpg" alt="dog" style="width: 1000px; height: 700px;" >
+                <div class="text">Caption Eight</div>
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext"> 
+                    9/14
+                </div>
+                <img src="./img/honey-chilli.jpg" alt="dog" style="width: 1000px; height: 700px;">
+                <div class="text">Caption Nine</div>
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext"> 
+                    10/14
+                </div>
+                <img src="./img/Iced-Mocha cofee.webp" alt="dog" style="width: 1000px; height: 700px;">
+                <div class="text">Caption Ten</div>
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext"> 
+                    11/14
+                </div>
+                <img src="./img/pasta.jpg" alt="dog" style="width: 1000px; height: 700px;">
+                <div class="text">Caption Eleven</div>
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext"> 
+                    12/14
+                </div>
+                <img src="./img/pizza.jpg" alt="dog" style="width: 1000px; height: 700px;">
+                <div class="text">Caption Twelve</div>
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext"> 
+                    13/14
+                </div>
+                <img src="./img/Sandwich.jpg" alt="dog" style="width: 1000px; height: 700px;">
+                <div class="text">Caption Thirteen</div>
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext"> 
+                    14/14
+                </div>
+                <img src="./img/Tawa-Paneer-Masala-Recipe.jpg" alt="dog" style="width: 1000px; height: 700px;">
+                <div class="text">Caption Fourteen</div>
+            </div>
+    
+            
+    
+            
+            
+    
+           
+    
+           
+    
+            <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a> -->
+            <!-- <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+             <button  class="next" onclick="plusSlides(1)">Next</button>
+             <button class="prev" onclick="plusSlides(-1)">Previous</button>
+        </div>
+    
+        <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+            <span class="dot" onclick="currentSlide(11)"></span>
+            <span class="dot" onclick="currentSlide(12)"></span>
+            <span class="dot" onclick="currentSlide(13)"></span>
+            <span class="dot" onclick="currentSlide(14)"></span>
+            <span class="dot" onclick="currentSlide(15)"></span>
+            <span class="dot" onclick="currentSlide(16)"></span>
+            <span class="dot" onclick="currentSlide(17)"></span>
+            <span class="dot" onclick="currentSlide(18)"></span>
+            <span class="dot" onclick="currentSlide(19)"></span>
+            <span class="dot" onclick="currentSlide(20)"></span>
+    
+        </div>
+    </body>
+    </html>
+    
+    <script>         
+    window.onload = function() {
+      var slideIndex = 0;
+      var timer = setInterval(function() {
+        plusSlides(1); // Next slide ko display karna
+      }, 2000);
+    };
+    
+    function plusSlides(n) {
+                clearInterval(timer); // Timer clear karna
+                slideIndex += n;
+                showSlides(slideIndex);
+                timer = setInterval(function() {
+                plusSlides(1);
+                }, 2000); // Timer ko phir se set karna
+    }
+        let slideIndex = 1;
+        showSlides(slideIndex);
+    
+        // next/prev control
+        function plusSlides(n){
+            showSlides(slideIndex +=n);
+        }
+       
+    
+    
+        // thumbnail img control
+        function currentSlide(n){
+            showSlides(silideIndex =n);
+        }
+    
+        function showSlides(n){
+            let i;
+            let slieds = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if(n>slieds.length){
+                slideIndex=1;
+            }
+            if(n<1){
+                slideIndex=slieds.length
+            }
+            for(i=0;i<slieds.length;i++){
+                slieds[i].style.display="none";
+            }
+            for(i=0;i<dots.length;i++){
+                dots[i].className = dots[i].className.replace("active","");
+            }
+    
+            slieds[slideIndex-1].style.display="block";
+            dots[slideIndex-1].className +=" active";
+        }
+
+        
+    
+    </script>
+    
